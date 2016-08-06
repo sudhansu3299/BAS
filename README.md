@@ -4,9 +4,9 @@
 
 Features:
 
-*The application makes use of [Stripe](https://stripe.com/) in order to manage transactions.
-*It uses MongoDB Mongoose to manage to database.
-*It uses Handlebars as the HTML Templating Engine.
+* The application makes use of [Stripe](https://stripe.com/) in order to manage transactions.
+* It uses MongoDB Mongoose to manage to database.
+* It uses Handlebars as the HTML Templating Engine.
 
 ## To Use
 
