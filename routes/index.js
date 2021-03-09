@@ -4,6 +4,7 @@ var Cart = require('../models/cart');
 var Product = require('../models/product');
 var Order = require('../models/order');
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var successMsg = req.flash('success')[0];
@@ -16,6 +17,23 @@ router.get('/', function(req, res, next) {
 		res.render('shop/index', { title: 'Shopping Cart', products: productChunk, successMsg: successMsg, noMessage: !successMsg });
 	});
 });
+
+// router.post('/',isLoggedIn, async function(req,res){
+// 	var book = new Product({
+// 		imagePath: '/images/book2.jpg',
+// 		title: 'Harry Potter Book: Goblet of Fire',
+// 		description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptatibus quia nobis, perspiciatis sequi tenetur repudiandae dicta iure.',
+// 		price: 360
+// 	})
+// 	await book.save().then(item => {
+// 		res.send("item saved to database");
+// 		res.redirect('/');
+// 	  })
+// 	  .catch(err => {
+// 		res.status(400).send("unable to save to database");
+// 	  });
+// 	console.log('hello!')
+// })
 
 router.get('/add-to-cart/:id', function(req, res, next) {
 	var productId = req.params.id;
